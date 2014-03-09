@@ -4,7 +4,7 @@ public class Node {
 	private int[] data;
 	private int lastIdx;
 	HashMap<Character,Edge> next=new HashMap<Character, Edge>();
-	private Edge suffixLink;
+	private Node suffixLink;
 	private final int capacity=8;
 
 	public Node() {
@@ -28,11 +28,11 @@ public class Node {
 		this.next = next;
 	}
 
-	public Edge getSuffixLink() {
+	public Node getSuffixLink() {
 		return suffixLink;
 	}
 
-	public void setSuffixLink(Edge suffixLink) {
+	public void setSuffixLink(Node suffixLink) {
 		this.suffixLink = suffixLink;
 	}
 }

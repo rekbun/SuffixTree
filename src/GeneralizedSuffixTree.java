@@ -6,7 +6,6 @@ public class GeneralizedSuffixTree {
 	char[] text;
 
 	private int position=-1;
-	private int currentNode;
 	private Node needSuffixLink;
 
 	private int remainder;
@@ -30,13 +29,14 @@ public class GeneralizedSuffixTree {
 	}
 
 	public void put(String inp,int dataIndex) {
+		inp+="#";
 		reset(inp.length());
 		if(inp==null||inp.isEmpty()) {
 			return;
 		}
 		Node lastNode = null;
 		for(int i=0;i<inp.length();i++) {
-			lastNode=addChar(inp.charAt(i),inp);
+			lastNode=addChar(i,inp);
 		}
 		assert lastNode != null;
 		lastNode.setData(dataIndex);
@@ -52,8 +52,8 @@ public class GeneralizedSuffixTree {
 		activeEdge=0;
 	}
 
-	private Node addChar(char c,String string) {
-		text[++position]=c;
+	private Node addChar(int idx,String string) {
+		text[++position]=string.charAt(idx);
 		needSuffixLink=null;
 		remainder++;
 		Node ret=null;
@@ -62,38 +62,39 @@ public class GeneralizedSuffixTree {
 				activeEdge=position;
 			}
 			if(!activeNode.next.containsKey(text[activeEdge])) {
-				Edge newEdge=new Edge(string.substring(position));
+				Edge newEdge=new Edge(string.substring(position).intern());
 				Node newNode=new Node();
 				newEdge.setDest(newNode);
 				activeNode.next.put(text[activeEdge],newEdge);
-				addSuffixLink(newEdge);
+				addSuffixLink(activeNode);
+				ret=newNode();
 			}else {
 				Edge edge=activeNode.next.get(text[activeEdge]);
 				if(walkDown(edge)) continue;
-				if(edge.getLabel().charAt(activeLength)==c) {
+				if(edge.getLabel().charAt(activeLength)==string.charAt(idx)) {
 					activeLength++;
-					addSuffixLink(edge);
+					addSuffixLink(activeNode);
 					break;
 				}
 				Node split=newNode();
-				Edge newEdge=new Edge(edge.getLabel().substring(0,activeLength));
+				Edge newEdge=new Edge(edge.getLabel().substring(0,activeLength).intern());
 				newEdge.setDest(split);
 				activeNode.next.put(text[activeEdge],newEdge);
-				Edge leaf=new Edge(string.substring(position));
+				Edge leaf=new Edge(string.substring(position).intern());
 				Node leafNode=newNode();
 				ret=leafNode;
 				leaf.setDest(leafNode);
-				split.next.put(c, leaf);
-				edge.setLabel(edge.getLabel().substring(activeLength+1));
+				split.next.put(string.charAt(idx), leaf);
+				edge.setLabel(edge.getLabel().substring(activeLength).intern());
 				split.next.put(edge.getLabel().charAt(0),edge);
-				addSuffixLink(newEdge);
+				addSuffixLink(split);
 			}
 			remainder--;
 			if(activeNode==root && activeLength>0) {
 				activeLength--;
 				activeEdge=position-remainder+1;
 			}else {
-				activeNode=activeNode.getSuffixLink()!=null?activeNode.getSuffixLink().getDest():root;
+				activeNode=activeNode.getSuffixLink()!=null?activeNode.getSuffixLink():root;
 			}
 		}
 		return ret;
@@ -109,11 +110,11 @@ public class GeneralizedSuffixTree {
 		return false;
 	}
 
-	private void addSuffixLink(Edge activeLink) {
+	private void addSuffixLink(Node activeLink) {
 		if(needSuffixLink!=null) {
 			needSuffixLink.setSuffixLink(activeLink);
 		}
-		needSuffixLink=activeNode;
+		needSuffixLink=activeLink;
 	}
 
 	public Collection<Integer> search(String word) {
@@ -128,6 +129,7 @@ public class GeneralizedSuffixTree {
 	public static void main(String... args) {
 		GeneralizedSuffixTree generalizedSuffixTree=new GeneralizedSuffixTree();
 		generalizedSuffixTree.put("abcabxabcd",0);
+		generalizedSuffixTree.put("sdfabcsdf",1);
 		int y;
 		Scanner scanner=new Scanner(System.in);
 		scanner.next();
