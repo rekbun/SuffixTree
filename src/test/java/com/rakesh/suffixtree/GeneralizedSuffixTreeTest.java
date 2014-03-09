@@ -31,4 +31,19 @@ public class GeneralizedSuffixTreeTest extends TestCase {
 			assertEquals(true,generalizedSuffixTree.search(array[i]).contains(i));
 		}
 	}
+
+	public void testSearchForLimit() throws Exception{
+
+		GeneralizedSuffixTree generalizedSuffixTree = new GeneralizedSuffixTree();
+		String[] array=new String[]{
+				"abca",
+				"sdfabcsdf",
+				"sssssfd"
+		};
+		for(int i=0;i<array.length;i++) {
+			generalizedSuffixTree.put(array[i], i);
+		}
+
+		assertEquals(1,generalizedSuffixTree.search("s",1).size());
+	}
 }

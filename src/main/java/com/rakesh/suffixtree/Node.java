@@ -7,9 +7,9 @@ public class Node {
 	private int lastIdx;
 	HashMap<Character, Edge> next = new HashMap<Character, Edge>();
 	private Node suffixLink;
-	private final int INITIAL_CAPACITY = 0;
 
 	public Node() {
+		int INITIAL_CAPACITY = 0;
 		this.data = new int[INITIAL_CAPACITY];
 		lastIdx = 0;
 	}
@@ -20,9 +20,9 @@ public class Node {
 
 	public Collection<Integer> getData(int limit) {
 		Set<Integer> ret = new HashSet<Integer>();
-		for (int d : data) {
+		for (int d=0;d<lastIdx;d++) {
 			if (ret.size() < limit) {
-				ret.add(d);
+				ret.add(data[d]);
 			}
 		}
 
