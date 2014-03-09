@@ -16,7 +16,7 @@
     <file path="/GeneralizedSuffixTree.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376140938" ignored="false" />
     <file path="/fragment.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376824746" ignored="false" />
     <file path="$PROJECT_DIR$/src/GeneralizedSuffixTreeTest.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376489790" ignored="false" />
-    <file path="/GeneralizedSuffixTreeTest.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394377031940" ignored="false" />
+    <file path="/GeneralizedSuffixTreeTest.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394377302322" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +140,7 @@
       <file leaf-file-name="GeneralizedSuffixTreeTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/rakesh/suffixtree/GeneralizedSuffixTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="356" selection-end="356" vertical-scroll-proportion="0.35190615">
+            <state line="14" column="43" selection-start="498" selection-end="498" vertical-scroll-proportion="-0.29618767">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testSearch#0;class#GeneralizedSuffixTreeTest#0" expanded="true" />
@@ -353,7 +353,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GeneralizedSuffixTreeTest.testPut">
+  <component name="RunManager" selected="JUnit.GeneralizedSuffixTreeTest">
     <configuration default="false" name="GeneralizedSuffixTreeTest.testPut" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -368,6 +368,34 @@
       <option name="MAIN_CLASS_NAME" value="test.java.com.rakesh.suffixtree.GeneralizedSuffixTreeTest" />
       <option name="METHOD_NAME" value="testPut" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="GeneralizedSuffixTreeTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.java.com.rakesh.suffixtree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SuffixTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.java.com.rakesh.suffixtree" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.rakesh.suffixtree.GeneralizedSuffixTreeTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -496,13 +524,15 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.GeneralizedSuffixTree" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest.testPut" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest.testPut" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest.testPut" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -700,7 +730,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/rakesh/suffixtree/GeneralizedSuffixTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="356" selection-end="356" vertical-scroll-proportion="0.35190615">
+        <state line="14" column="43" selection-start="498" selection-end="498" vertical-scroll-proportion="-0.29618767">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testSearch#0;class#GeneralizedSuffixTreeTest#0" expanded="true" />

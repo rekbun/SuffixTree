@@ -20,10 +20,15 @@ public class GeneralizedSuffixTreeTest extends TestCase {
 		GeneralizedSuffixTree generalizedSuffixTree = new GeneralizedSuffixTree();
 		String[] array=new String[]{
 				"abca",
-				"sdfabcsdf"
+				"sdfabcsdf",
+				"sssssfd"
 		};
-		generalizedSuffixTree.put(array[0], 0);
-		generalizedSuffixTree.put(array[1], 1);
+		for(int i=0;i<array.length;i++) {
+			generalizedSuffixTree.put(array[i], i);
+		}
 
+		for(int i=0;i<array.length;i++) {
+			assertEquals(true,generalizedSuffixTree.search(array[i]).contains(i));
+		}
 	}
 }
