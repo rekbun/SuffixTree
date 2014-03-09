@@ -1,3 +1,5 @@
+package main.java.com.rakesh.suffixtree;
+
 import java.util.*;
 
 public class Node {

@@ -14,7 +14,9 @@
     <file path="$PROJECT_DIR$/../others/suffixtree/src/main/java/com/abahgat/suffixtree/EdgeBag.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394301021614" ignored="false" />
     <file path="/Edge.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394351625217" ignored="false" />
     <file path="/GeneralizedSuffixTree.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376140938" ignored="false" />
-    <file path="/fragment.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394369931606" ignored="false" />
+    <file path="/fragment.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376824746" ignored="false" />
+    <file path="$PROJECT_DIR$/src/GeneralizedSuffixTreeTest.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394376489790" ignored="false" />
+    <file path="/GeneralizedSuffixTreeTest.java" changelist="b5255abe-2ed4-4e17-87b5-7ae27eb5b335" time="1394377031940" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,21 +67,7 @@
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/src/GeneralizedSuffixTree.java" line="138" class="GeneralizedSuffixTree" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/GeneralizedSuffixTree.java" line="115" class="GeneralizedSuffixTree" package="">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/GeneralizedSuffixTree.java" line="116" class="GeneralizedSuffixTree" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -104,15 +92,15 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="Node.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Node.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+            <state line="39" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#128#145#0" expanded="true" />
+                <element signature="e#170#187#0" expanded="true" />
                 <element signature="method#Node#0;class#Node#0" expanded="true" />
                 <element signature="method#getData#0;class#Node#0" expanded="true" />
                 <element signature="method#getData#1;class#Node#0" expanded="true" />
-                <element signature="e#456#465#0" expanded="true" />
+                <element signature="e#498#507#0" expanded="true" />
                 <element signature="method#ensureCapacity#0;class#Node#0" expanded="true" />
               </folding>
             </state>
@@ -120,18 +108,18 @@
         </entry>
       </file>
       <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Data.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+            <state line="2" column="18" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralizedSuffixTree.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GeneralizedSuffixTree.java">
+      <file leaf-file-name="GeneralizedSuffixTree.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/GeneralizedSuffixTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="51" selection-start="3610" selection-end="3610" vertical-scroll-proportion="0.9065934">
+            <state line="134" column="0" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#GeneralizedSuffixTree#0;class#GeneralizedSuffixTree#0" expanded="true" />
@@ -149,6 +137,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="GeneralizedSuffixTreeTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/rakesh/suffixtree/GeneralizedSuffixTreeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="19" selection-start="356" selection-end="356" vertical-scroll-proportion="0.35190615">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#testSearch#0;class#GeneralizedSuffixTreeTest#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="String.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_40.jdk/Contents/Home/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -159,9 +159,9 @@
         </entry>
       </file>
       <file leaf-file-name="Edge.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Edge.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="27" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+            <state line="6" column="27" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#Edge#0;class#Edge#0" expanded="true" />
                 <element signature="method#getLength#0;class#Edge#0" expanded="true" />
@@ -182,7 +182,7 @@
       <file leaf-file-name="SuffixTree.iml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SuffixTree.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,7 +212,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
+        <option value="$PROJECT_DIR$/src/GeneralizedSuffixTreeTest.java" />
         <option value="$PROJECT_DIR$/src/GeneralizedSuffixTree.java" />
+        <option value="$PROJECT_DIR$/src/main/GeneralizedSuffixTree.java" />
+        <option value="$PROJECT_DIR$/src/test/GeneralizedSuffixTreeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/GeneralizedSuffixTree.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/rakesh/suffixtree/GeneralizedSuffixTreeTest.java" />
       </list>
     </option>
   </component>
@@ -287,6 +292,28 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suffixtree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SuffixTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SuffixTree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suffixtree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -295,6 +322,7 @@
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Project" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -304,6 +332,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -312,11 +341,47 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="test.java.com.rakesh.suffixtree" />
+      <recent name="test" />
+      <recent name="" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GeneralizedSuffixTree">
+  <component name="RunManager" selected="JUnit.GeneralizedSuffixTreeTest.testPut">
+    <configuration default="false" name="GeneralizedSuffixTreeTest.testPut" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.java.com.rakesh.suffixtree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="SuffixTree" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.java.com.rakesh.suffixtree" />
+      <option name="MAIN_CLASS_NAME" value="test.java.com.rakesh.suffixtree.GeneralizedSuffixTreeTest" />
+      <option name="METHOD_NAME" value="testPut" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -410,7 +475,7 @@
     </configuration>
     <configuration default="false" name="GeneralizedSuffixTree" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="GeneralizedSuffixTree" />
+      <option name="MAIN_CLASS_NAME" value="main.java.com.rakesh.suffixtree.GeneralizedSuffixTree" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -431,9 +496,15 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.GeneralizedSuffixTree" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest.testPut" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.GeneralizedSuffixTreeTest.testPut" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -490,7 +561,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24554294" sideWeight="0.6700855" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -565,7 +636,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SuffixTree.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -577,30 +648,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
+        <state line="2" column="18" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="783" selection-end="783" vertical-scroll-proportion="0.0">
+        <state line="39" column="0" selection-start="825" selection-end="825" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#128#145#0" expanded="true" />
+            <element signature="e#170#187#0" expanded="true" />
             <element signature="method#Node#0;class#Node#0" expanded="true" />
             <element signature="method#getData#0;class#Node#0" expanded="true" />
             <element signature="method#getData#1;class#Node#0" expanded="true" />
-            <element signature="e#456#465#0" expanded="true" />
+            <element signature="e#498#507#0" expanded="true" />
             <element signature="method#ensureCapacity#0;class#Node#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+        <state line="6" column="27" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#Edge#0;class#Edge#0" expanded="true" />
             <element signature="method#getLength#0;class#Edge#0" expanded="true" />
@@ -608,9 +679,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneralizedSuffixTree.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/rakesh/suffixtree/GeneralizedSuffixTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="51" selection-start="3610" selection-end="3610" vertical-scroll-proportion="0.9065934">
+        <state line="134" column="0" selection-start="3353" selection-end="3353" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#GeneralizedSuffixTree#0;class#GeneralizedSuffixTree#0" expanded="true" />
@@ -623,6 +694,16 @@
             <element signature="method#search#0;class#GeneralizedSuffixTree#0" expanded="true" />
             <element signature="method#search#1;class#GeneralizedSuffixTree#0" expanded="true" />
             <element signature="method#findNode#0;class#GeneralizedSuffixTree#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/rakesh/suffixtree/GeneralizedSuffixTreeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="356" selection-end="356" vertical-scroll-proportion="0.35190615">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#testSearch#0;class#GeneralizedSuffixTreeTest#0" expanded="true" />
           </folding>
         </state>
       </provider>

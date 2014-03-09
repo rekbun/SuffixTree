@@ -1,3 +1,5 @@
+package main.java.com.rakesh.suffixtree;
+
 import java.util.Collection;
 import java.util.Scanner;
 
@@ -11,7 +13,6 @@ public class GeneralizedSuffixTree {
 	private int activeLength, activeEdge;
 	private Node activeNode;
 	private final Node root;
-	private static final int INITIAL_CAPACITY = 16;
 
 	public GeneralizedSuffixTree() {
 		root = activeNode = newNode();
@@ -131,14 +132,5 @@ public class GeneralizedSuffixTree {
 		return it;
 	}
 
-	public static void main(String... args) {
-		GeneralizedSuffixTree generalizedSuffixTree = new GeneralizedSuffixTree();
-		generalizedSuffixTree.put("abca", 0);
-		generalizedSuffixTree.put("sdfabcsdf", 1);
-		System.out.print(generalizedSuffixTree.search("abcd"));
-		Scanner scanner = new Scanner(System.in);
-		scanner.next();
-
-	}
 
 }
