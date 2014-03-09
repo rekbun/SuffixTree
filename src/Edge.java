@@ -3,7 +3,7 @@ public class Edge {
 	private Node dest;
 
 	public Edge(String substring) {
-		label=substring;
+		label = substring;
 	}
 
 	public String getLabel() {

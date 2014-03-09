@@ -2,136 +2,141 @@ import java.util.Collection;
 import java.util.Scanner;
 
 public class GeneralizedSuffixTree {
-	Node[] nodes;
-	char[] text;
+	private char[] text;
 
-	private int position=-1;
+	private int position = -1;
 	private Node needSuffixLink;
 
 	private int remainder;
-	private int activeLength,activeEdge;
+	private int activeLength, activeEdge;
 	private Node activeNode;
-	private Node root;
-	private static final int capacity=16;
+	private final Node root;
+	private static final int INITIAL_CAPACITY = 16;
 
 	public GeneralizedSuffixTree() {
-		this(capacity);
-	}
-	public GeneralizedSuffixTree(int capacity) {
-		nodes= new Node[capacity];
-		text=new char[capacity];
-	 	root=activeNode=newNode();
+		root = activeNode = newNode();
 	}
 
 	private Node newNode() {
-		Node node=new Node();
-		return node;
+		return new Node();
 	}
 
-	public void put(String inp,int dataIndex) {
-		inp+="#";
-		reset(inp.length());
-		if(inp==null||inp.isEmpty()) {
+	public void put(String inp, int dataIndex) {
+		if (inp == null || inp.isEmpty()) {
 			return;
 		}
-		Node lastNode = null;
-		for(int i=0;i<inp.length();i++) {
-			lastNode=addChar(i,inp);
+		inp += "#";
+		reset(inp.length());
+		for (int i = 0; i < inp.length(); i++) {
+			addChar(i, inp, dataIndex);
 		}
-		assert lastNode != null;
-		lastNode.setData(dataIndex);
 	}
 
 	private void reset(int length) {
-		text=new char[length];
-		remainder=0;
-		position=0;
-		activeNode=root;
-		position=-1;
-		activeLength=0;
-		activeEdge=0;
+		text = new char[length];
+		remainder = 0;
+		position = 0;
+		activeNode = root;
+		position = -1;
+		activeLength = 0;
+		activeEdge = 0;
 	}
 
-	private Node addChar(int idx,String string) {
-		text[++position]=string.charAt(idx);
-		needSuffixLink=null;
+	private void addChar(int idx, String string, int dataIndex) {
+		text[++position] = string.charAt(idx);
+		needSuffixLink = null;
 		remainder++;
-		Node ret=null;
-		while (remainder>0) {
-			if(activeLength==0) {
-				activeEdge=position;
+		Node ret = null;
+		while (remainder > 0) {
+			if (activeLength == 0) {
+				activeEdge = position;
 			}
-			if(!activeNode.next.containsKey(text[activeEdge])) {
-				Edge newEdge=new Edge(string.substring(position).intern());
-				Node newNode=new Node();
+			if (!activeNode.next.containsKey(text[activeEdge])) {
+				Edge newEdge = new Edge(string.substring(position).intern());
+				Node newNode = new Node();
+				newNode.setData(dataIndex);
 				newEdge.setDest(newNode);
-				activeNode.next.put(text[activeEdge],newEdge);
+				activeNode.next.put(text[activeEdge], newEdge);
 				addSuffixLink(activeNode);
-				ret=newNode();
-			}else {
-				Edge edge=activeNode.next.get(text[activeEdge]);
-				if(walkDown(edge)) continue;
-				if(edge.getLabel().charAt(activeLength)==string.charAt(idx)) {
+			} else {
+				Edge edge = activeNode.next.get(text[activeEdge]);
+				if (walkDown(edge)) continue;
+				if (edge.getLabel().charAt(activeLength) == string.charAt(idx)) {
 					activeLength++;
 					addSuffixLink(activeNode);
 					break;
 				}
-				Node split=newNode();
-				Edge newEdge=new Edge(edge.getLabel().substring(0,activeLength).intern());
+				Node split = newNode();
+				Edge newEdge = new Edge(edge.getLabel().substring(0, activeLength).intern());
 				newEdge.setDest(split);
-				activeNode.next.put(text[activeEdge],newEdge);
-				Edge leaf=new Edge(string.substring(position).intern());
-				Node leafNode=newNode();
-				ret=leafNode;
+				activeNode.next.put(text[activeEdge], newEdge);
+				Edge leaf = new Edge(string.substring(position).intern());
+				Node leafNode = newNode();
+				leafNode.setData(dataIndex);
 				leaf.setDest(leafNode);
 				split.next.put(string.charAt(idx), leaf);
 				edge.setLabel(edge.getLabel().substring(activeLength).intern());
-				split.next.put(edge.getLabel().charAt(0),edge);
+				split.next.put(edge.getLabel().charAt(0), edge);
 				addSuffixLink(split);
 			}
 			remainder--;
-			if(activeNode==root && activeLength>0) {
+			if (activeNode == root && activeLength > 0) {
 				activeLength--;
-				activeEdge=position-remainder+1;
-			}else {
-				activeNode=activeNode.getSuffixLink()!=null?activeNode.getSuffixLink():root;
+				activeEdge = position - remainder + 1;
+			} else {
+				activeNode = activeNode.getSuffixLink() != null ? activeNode.getSuffixLink() : root;
 			}
 		}
-		return ret;
 	}
 
 	private boolean walkDown(Edge edge) {
-		if(activeLength>=edge.getLength()) {
-			activeEdge+=edge.getLength();
-			activeLength-=edge.getLength();
-			activeNode=edge.getDest();
+		if (activeLength >= edge.getLength()) {
+			activeEdge += edge.getLength();
+			activeLength -= edge.getLength();
+			activeNode = edge.getDest();
 			return true;
 		}
 		return false;
 	}
 
 	private void addSuffixLink(Node activeLink) {
-		if(needSuffixLink!=null) {
+		if (needSuffixLink != null) {
 			needSuffixLink.setSuffixLink(activeLink);
 		}
-		needSuffixLink=activeLink;
+		needSuffixLink = activeLink;
 	}
 
 	public Collection<Integer> search(String word) {
-		return null;
+		return search(word, Integer.MAX_VALUE);
 	}
 
 
-	public Collection<Integer> search(String word,int limit) {
+	public Collection<Integer> search(String word, int limit) {
+		Node dataNode = findNode(word);
+		if (dataNode != null) {
+			return dataNode.getData(limit);
+		}
 		return null;
+	}
+
+	private Node findNode(String word) {
+		Node it = root;
+		for (int i = 0; i < word.length(); ) {
+			if (it.next.containsKey(word.charAt(i))) {
+				Edge edge = it.next.get(word.charAt(i));
+				i += edge.getLength();
+				it = edge.getDest();
+			}
+		}
+		return it;
 	}
 
 	public static void main(String... args) {
-		GeneralizedSuffixTree generalizedSuffixTree=new GeneralizedSuffixTree();
-		generalizedSuffixTree.put("abcabxabcd",0);
-		generalizedSuffixTree.put("sdfabcsdf",1);
-		int y;
-		Scanner scanner=new Scanner(System.in);
+		GeneralizedSuffixTree generalizedSuffixTree = new GeneralizedSuffixTree();
+		generalizedSuffixTree.put("abca", 0);
+		generalizedSuffixTree.put("sdfabcsdf", 1);
+		System.out.print(generalizedSuffixTree.search("abcd"));
+		Scanner scanner = new Scanner(System.in);
 		scanner.next();
 
 	}
